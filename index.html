@@ -1,212 +1,226 @@
+```html
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Norte Sul Construção Civil — Engenharia, Construções e Reformas de Alto Padrão. Qualidade, solidez e compromisso com o seu projeto.">
-  <meta name="theme-color" content="#0d1117">
-  <title>Norte Sul Construção Civil | Engenharia & Obras</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <a href="#inicio" class="logo">
-      <div class="logo-mark">NS</div>
-      <div class="logo-text">
-        NORTE SUL
-        <small>CONSTRUÇÃO CIVIL</small>
-      </div>
-    </a>
-
-    <nav>
-      <a href="#servicos">Serviços</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#sobre">Diferenciais</a>
-      <a class="nav-btn" href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20Norte%20Sul." target="_blank" rel="noopener">
-        Orçamento ↗
-      </a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section id="inicio" class="hero">
-      <div class="hero-content">
-        <span class="badge">ENGENHARIA & CONSTRUÇÃO</span>
-        <h1>
-          Transformamos projetos em
-          <em>obras sólidas e duradouras.</em>
-        </h1>
-        <p class="hero-lead">
-          Especialistas em construção civil, gestão de obras e reformas estruturais. Executamos seu projeto com rigor técnico, controle absoluto de prazos e excelência em cada detalhe.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="https://wa.me/5500000000000?text=Olá,%20vim%20pelo%20site%20e%20quero%20falar%20sobre%20uma%20obra." target="_blank" rel="noopener">
-            Falar com Engenheiro
-            <b>↗</b>
-          </a>
-          <a class="btn secondary" href="#projetos">
-            Ver Nossas Obras
-          </a>
-        </div>
-
-        <div class="hero-metrics">
-          <div>
-            <strong>+15</strong>
-            <span>Anos de Experiência</span>
-          </div>
-          <div>
-            <strong>100%</strong>
-            <span>Obras Entregues</span>
-          </div>
-          <div>
-            <strong>Alto</strong>
-            <span>Padrão de Acabamento</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-media">
-        <!-- Substitua pelo caminho da foto real da construtora -->
-        <img src="assets/obra-destaque.jpg" alt="Obra executada pela Norte Sul Construção Civil" loading="eager">
-        <div class="media-badge">
-          <span>PADRÃO NORTE SUL</span>
-          <b>Qualidade e Segurança em Cada Etapa</b>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="services">
-      <div class="section-header">
-        <span class="section-tag">01 / O QUE FAZEMOS</span>
-        <h2>Soluções completas para<br><em>a sua construção.</em></h2>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <span>01</span>
-          <h3>Construção Residencial & Comercial</h3>
-          <p>Execução integral de fundações ao acabamento final, erguendo estruturas seguras, funcionais e modernas.</p>
-        </div>
-
-        <div class="service-card">
-          <span>02</span>
-          <h3>Reformas e Modernização</h3>
-          <p>Transformação completa de ambientes corporativos ou residenciais com otimização de espaços e design atualizado.</p>
-        </div>
-
-        <div class="service-card">
-          <span>03</span>
-          <h3>Gestão e Planejamento de Obras</h3>
-          <p>Controle financeiro rigoroso, cronograma assertivo e supervisão técnica especializada para evitar desperdícios.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFÓLIO / PROJETOS -->
-    <section id="projetos" class="projects">
-      <div class="section-header">
-        <span class="section-tag">02 / PORTFÓLIO</span>
-        <h2>Projetos que atestam<br><em>a nossa credibilidade.</em></h2>
-      </div>
-
-      <div class="projects-grid">
-        <figure class="proj-large">
-          <img src="assets/projeto-1.jpg" alt="Residência de alto padrão construída pela Norte Sul" loading="lazy">
-          <figcaption>Residência Alto Padrão — Execução Completa</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/projeto-2.jpg" alt="Estrutura de concreto" loading="lazy">
-          <figcaption>Estrutura & Fundação</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/projeto-3.jpg" alt="Acabamento de obra" loading="lazy">
-          <figcaption>Acabamentos Especiais</figcaption>
-        </figure>
-
-        <figure class="proj-wide">
-          <img src="assets/projeto-4.jpg" alt="Obra comercial executada" loading="lazy">
-          <figcaption>Projeto Comercial Executado</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- DIFERENCIAIS / SOBRE -->
-    <section id="sobre" class="features-dark">
-      <div class="features-inner">
-        <div>
-          <span class="section-tag light">03 / POR QUE A NORTE SUL</span>
-          <h2>Compromisso rigoroso com<br><em>o seu investimento.</em></h2>
-          <p>Não construímos apenas estruturas; construímos relações de confiança. Cada metro quadrado executado passa por um rígido padrão de controle de qualidade e engenharia.</p>
-        </div>
-
-        <div class="features-list">
-          <div class="feat-item">
-            <strong>Equipe Técnica Habilitada</strong>
-            <p>Engenheiros e mestres de obra experientes supervisionando cada detalhe diário.</p>
-          </div>
-          <div class="feat-item">
-            <strong>Cumprimento de Prazos</strong>
-            <p>Cronogramas sérios e planejados para evitar atrasos e dores de cabeça.</p>
-          </div>
-          <div class="feat-item">
-            <strong>Transparência Total</strong>
-            <p>Orçamentos claros, relatórios periódicos e acompanhamento de perto.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO / CTA FINAL -->
-    <section class="cta-section">
-      <div class="cta-box">
-        <span class="section-tag">INICIE SEU PROJETOS</span>
-        <h2>Pronto para tirar sua<br><em>obra do papel?</em></h2>
-        <p>Entre em contato direto com nossa equipe de engenharia para conversar sobre o seu orçamento.</p>
-        <a class="btn primary light-btn" href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20solicitar%20uma%20visita%20técnica%20ou%20orçamento." target="_blank" rel="noopener">
-          Solicitar Atendimento via WhatsApp <b>↗</b>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="logo">
-      <div class="logo-mark">NS</div>
-      <div class="logo-text">
-        NORTE SUL
-        <small>CONSTRUÇÃO CIVIL</small>
-      </div>
-    </div>
-
-    <div class="footer-links">
-      <a href="https://instagram.com/nortesulconstrucaocivil" target="_blank" rel="noopener">Instagram ↗</a>
-      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp ↗</a>
-    </div>
-  </footer>
-
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const el = document.querySelector(a.getAttribute('href'));
-        if (el) {
-          e.preventDefault();
-          el.scrollIntoView({ behavior: 'smooth' });
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norte Sul Construção Civil | Engenharia & Infraestrutura de Alto Padrão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cabinet+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nsul: {
+                            dark: '#080c10',
+                            card: '#0f1620',
+                            cardHover: '#16202c',
+                            accent: '#f59e0b',
+                            accentLight: '#fbbf24',
+                            muted: '#94a3b8',
+                            border: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Cabinet Grotesk"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
         }
-      });
-    });
-  </script>
+    </script>
+    <style>
+        body { background-color: #080c10; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav { background: rgba(8, 12, 16, 0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(8, 12, 16, 0.95), rgba(8, 12, 16, 0.75)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18f86f6?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .editorial-border { border-left: 2px solid #f59e0b; }
+        .amber-glow { box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.15); }
+    </style>
+</head>
+<body class="selection:bg-nsul-accent selection:text-nsul-dark overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-nsul-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="flex flex-col">
+                <span class="font-heading text-xl tracking-wider text-white font-extrabold uppercase">NORTE SUL</span>
+                <span class="text-[9px] tracking-[0.3em] text-nsul-accent uppercase font-semibold">Construção Civil & Infraestrutura</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-nsul-muted">
+                <a href="#sobre" class="hover:text-nsul-accentLight transition-colors">A Empresa</a>
+                <a href="#servicos" class="hover:text-nsul-accentLight transition-colors">Especialidades</a>
+                <a href="#diferenciais" class="hover:text-nsul-accentLight transition-colors">Engenharia</a>
+                <a href="#contato" class="hover:text-nsul-accentLight transition-colors">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20Norte%20Sul%20Construção%20Civil." 
+               target="_blank" 
+               class="hidden sm:inline-flex items-center gap-3 px-6 py-3 border border-nsul-accent/40 text-nsul-accent rounded-full text-xs font-bold uppercase tracking-widest hover:bg-nsul-accent hover:text-nsul-dark transition-all duration-300">
+                <i class="fa-brands fa-whatsapp text-sm"></i> Fale com Engenheiro
+            </a>
+        </div>
+    </header>
+
+    <section class="hero-bg min-h-screen pt-36 pb-20 flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-nsul-accent/10 border border-nsul-accent/20 text-nsul-accent text-xs tracking-widest uppercase font-semibold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-nsul-accent animate-pulse"></span> Padrão Rigoroso de Execução e Prazos
+                </div>
+                <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
+                    Construindo o futuro com <span class="text-nsul-accent">solidez e precisão.</span>
+                </h1>
+                <p class="text-nsul-muted text-base sm:text-lg max-w-xl font-light leading-relaxed">
+                    Especialistas em grandes obras de infraestrutura, engenharia civil, pavimentação e soluções energéticas. Transformamos projetos complexos em realizações duradouras.
+                </p>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20solicitar%20uma%20proposta%20técnica." 
+                       target="_blank" 
+                       class="px-8 py-4 bg-nsul-accent text-nsul-dark font-extrabold text-sm uppercase tracking-wider rounded-full hover:bg-nsul-accentLight transition-all text-center shadow-xl shadow-nsul-accent/20">
+                        Solicitar Proposta Técnica
+                    </a>
+                    <a href="#servicos" class="px-8 py-4 border border-nsul-border text-white font-semibold text-sm uppercase tracking-wider rounded-full hover:border-nsul-accent transition-all text-center">
+                        Conhecer Portfólio
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-3xl overflow-hidden border border-nsul-accent/30 amber-glow bg-nsul-card p-3">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Norte Sul Construção Civil" class="w-full h-[460px] object-cover rounded-2xl filter contrast-110 hover:contrast-125 transition-all duration-700">
+                    <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-nsul-dark/95 backdrop-blur border border-nsul-border">
+                        <span class="text-nsul-accent text-[10px] font-bold tracking-widest uppercase block mb-1">Excelência Operacional</span>
+                        <p class="text-white text-sm font-medium">Equipe técnica qualificada com foco em segurança, tecnologia e alto desempenho.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-32 border-t border-nsul-border bg-[#05080b]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-nsul-accent text-xs font-bold tracking-[0.3em] uppercase">Nossa Filosofia</span>
+                <h2 class="font-heading text-3xl sm:text-5xl text-white font-extrabold leading-tight">
+                    Compromisso inegociável com a qualidade e prazos.
+                </h2>
+                <div class="editorial-border pl-6 space-y-4 text-nsul-muted font-light text-sm leading-relaxed">
+                    <p>Cada projeto executado pela Norte Sul passa por um estudo técnico minucioso, unindo planejamento rigoroso e engenharia de ponta para garantir durabilidade e segurança absoluta.</p>
+                    <p>Nossa palavra é tão sólida quanto nossas estruturas. Entregamos o que prometemos com total transparência e respeito ao cliente e ao meio ambiente.</p>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-nsul-card p-8 rounded-3xl border border-nsul-border hover:border-nsul-accent/50 transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-nsul-accent/10 flex items-center justify-center text-nsul-accent mb-6 font-heading text-xl font-extrabold group-hover:scale-110 transition-transform">
+                        01
+                    </div>
+                    <h3 class="font-heading text-2xl text-white mb-3">Planejamento Técnico</h3>
+                    <p class="text-nsul-muted text-sm font-light leading-relaxed">Estudos detalhados de solo, viabilidade e cronogramas estritos para evitar atrasos e otimizar custos operacionais.</p>
+                </div>
+
+                <div class="bg-nsul-card p-8 rounded-3xl border border-nsul-border hover:border-nsul-accent/50 transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-nsul-accent/10 flex items-center justify-center text-nsul-accent mb-6 font-heading text-xl font-extrabold group-hover:scale-110 transition-transform">
+                        02
+                    </div>
+                    <h3 class="font-heading text-2xl text-white mb-3">Execução de Alta Performance</h3>
+                    <p class="text-nsul-muted text-sm font-light leading-relaxed">Parque de máquinas moderno e equipes especializadas transformando planos em estruturas robustas e seguras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-32 bg-nsul-dark border-t border-nsul-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
+                <div>
+                    <span class="text-nsul-accent text-xs font-bold tracking-[0.3em] uppercase block mb-3">Áreas de Atuação</span>
+                    <h2 class="font-heading text-4xl sm:text-5xl font-extrabold text-white">Nossas Especialidades</h2>
+                </div>
+                <p class="text-nsul-muted text-sm max-w-md mt-4 md:mt-0 font-light">
+                    Soluções completas em infraestrutura, terraplanagem, pavimentação e sistemas elétricos para o setor público e privado.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="group bg-nsul-card p-8 rounded-3xl border border-nsul-border flex flex-col justify-between hover:border-nsul-accent transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-nsul-accent font-heading text-xl font-bold uppercase tracking-wider">Infraestrutura</span>
+                            <i class="fa-solid fa-city text-2xl text-nsul-accent/60"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-white mb-3">Obras Civis & Estruturais</h3>
+                        <p class="text-nsul-muted text-sm font-light leading-relaxed mb-6">
+                            Projetos e execução de obras de grande porte com rigor técnico, garantindo durabilidade e segurança em cada metro quadrado construído.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Obras%20Civis." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-nsul-accent uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="group bg-nsul-card p-8 rounded-3xl border border-nsul-accent/50 flex flex-col justify-between hover:border-nsul-accent transition-all relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-nsul-accent text-nsul-dark text-[10px] font-extrabold px-4 py-1.5 rounded-bl-xl uppercase tracking-widest">Alta Demanda</div>
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-nsul-accent font-heading text-xl font-bold uppercase tracking-wider">Pavimentação</span>
+                            <i class="fa-solid fa-road text-2xl text-nsul-accent/60"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-white mb-3">Terraplanagem & Asfalto</h3>
+                        <p class="text-nsul-muted text-sm font-light leading-relaxed mb-6">
+                            Movimentação precisa de solo e pavimentações de qualidade superior com controle rigoroso de materiais e acabamento impecável.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Pavimentação." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-nsul-accent uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="group bg-nsul-card p-8 rounded-3xl border border-nsul-border flex flex-col justify-between hover:border-nsul-accent transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-nsul-accent font-heading text-xl font-bold uppercase tracking-wider">Energia</span>
+                            <i class="fa-solid fa-bolt text-2xl text-nsul-accent/60"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-white mb-3">Redes Elétricas & Solar</h3>
+                        <p class="text-nsul-muted text-sm font-light leading-relaxed mb-6">
+                            Implantação de redes de alta e baixa tensão, além de suporte, diagnóstico e manutenção em sistemas de energia fotovoltaica.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Redes%20Elétricas%20e%20Energia%20Solar." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-nsul-accent uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-[#05080b] border-t border-nsul-border py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="font-heading text-2xl text-white tracking-wide uppercase block mb-2 font-extrabold">NORTE SUL CONSTRUÇÃO CIVIL</span>
+                <p class="text-nsul-muted text-sm font-light">Engenharia, Infraestrutura e Soluções em Alta Tensão e Pavimentação • Atendimento especializado.</p>
+            </div>
+            <div class="flex md:justify-end gap-6">
+                <a href="https://instagram.com" target="_blank" class="px-6 py-3 rounded-full border border-nsul-border text-nsul-muted hover:text-nsul-accent hover:border-nsul-accent transition-all text-xs uppercase tracking-widest font-bold flex items-center gap-2">
+                    <i class="fa-brands fa-instagram"></i> <span>@nortesulconstrucaocivil</span>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-nsul-border/40 text-center text-xs text-nsul-muted font-light">
+            &copy; 2026 Norte Sul Construção Civil. Desenvolvido sob o Padrão de Engenharia e Design Moderno.
+        </div>
+    </footer>
+
 </body>
 </html>
+```
