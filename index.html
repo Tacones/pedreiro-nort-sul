@@ -1,226 +1,403 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norte Sul Construção Civil | Engenharia & Infraestrutura de Alto Padrão</title>
+    <title>Norte Sul Construção Civil | Engenharia e Obras de Alto Padrão</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cabinet+Grotesk:wght@700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        nsul: {
-                            dark: '#080c10',
-                            card: '#0f1620',
-                            cardHover: '#16202c',
-                            accent: '#f59e0b',
-                            accentLight: '#fbbf24',
-                            muted: '#94a3b8',
-                            border: '#1e293b'
-                        }
-                    },
-                    fontFamily: {
-                        heading: ['"Cabinet Grotesk"', 'sans-serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #080c10; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass-nav { background: rgba(8, 12, 16, 0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
-        .hero-bg {
-            background-image: linear-gradient(to right, rgba(8, 12, 16, 0.95), rgba(8, 12, 16, 0.75)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18f86f6?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .editorial-border { border-left: 2px solid #f59e0b; }
-        .amber-glow { box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.15); }
-    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="selection:bg-nsul-accent selection:text-nsul-dark overflow-x-hidden">
+<body class="bg-[#0A0A0A] text-[#F3F4F6] font-sans antialiased selection:bg-[#D97706] selection:text-white">
 
-    <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-nsul-border transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="flex flex-col">
-                <span class="font-heading text-xl tracking-wider text-white font-extrabold uppercase">NORTE SUL</span>
-                <span class="text-[9px] tracking-[0.3em] text-nsul-accent uppercase font-semibold">Construção Civil & Infraestrutura</span>
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-nsul-muted">
-                <a href="#sobre" class="hover:text-nsul-accentLight transition-colors">A Empresa</a>
-                <a href="#servicos" class="hover:text-nsul-accentLight transition-colors">Especialidades</a>
-                <a href="#diferenciais" class="hover:text-nsul-accentLight transition-colors">Engenharia</a>
-                <a href="#contato" class="hover:text-nsul-accentLight transition-colors">Contato</a>
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#D97706] flex items-center justify-center rounded-lg shadow-lg shadow-[#D97706]/20">
+                    <i data-lucide="building-2" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider text-white uppercase block">Norte Sul</span>
+                    <span class="text-xs tracking-widest text-[#D97706] uppercase block font-medium">Construção Civil</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#sobre" class="hover:text-[#D97706] transition-colors">A Empresa</a>
+                <a href="#servicos" class="hover:text-[#D97706] transition-colors">Serviços</a>
+                <a href="#projetos" class="hover:text-[#D97706] transition-colors">Projetos</a>
+                <a href="#diferenciais" class="hover:text-[#D97706] transition-colors">Diferenciais</a>
+                <a href="#contato" class="hover:text-[#D97706] transition-colors">Contato</a>
             </nav>
 
-            <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20Norte%20Sul%20Construção%20Civil." 
-               target="_blank" 
-               class="hidden sm:inline-flex items-center gap-3 px-6 py-3 border border-nsul-accent/40 text-nsul-accent rounded-full text-xs font-bold uppercase tracking-widest hover:bg-nsul-accent hover:text-nsul-dark transition-all duration-300">
-                <i class="fa-brands fa-whatsapp text-sm"></i> Fale com Engenheiro
-            </a>
+            <div class="hidden md:flex items-center gap-4">
+                <a 
+                    href="https://wa.me/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-2 bg-[#D97706] hover:bg-[#B45309] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-[#D97706]/20"
+                >
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    Falar no WhatsApp
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
-    </header>
 
-    <section class="hero-bg min-h-screen pt-36 pb-20 flex items-center relative">
-        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-8">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-nsul-accent/10 border border-nsul-accent/20 text-nsul-accent text-xs tracking-widest uppercase font-semibold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-nsul-accent animate-pulse"></span> Padrão Rigoroso de Execução e Prazos
-                </div>
-                <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
-                    Construindo o futuro com <span class="text-nsul-accent">solidez e precisão.</span>
-                </h1>
-                <p class="text-nsul-muted text-base sm:text-lg max-w-xl font-light leading-relaxed">
-                    Especialistas em grandes obras de infraestrutura, engenharia civil, pavimentação e soluções energéticas. Transformamos projetos complexos em realizações duradouras.
-                </p>
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20solicitar%20uma%20proposta%20técnica." 
-                       target="_blank" 
-                       class="px-8 py-4 bg-nsul-accent text-nsul-dark font-extrabold text-sm uppercase tracking-wider rounded-full hover:bg-nsul-accentLight transition-all text-center shadow-xl shadow-nsul-accent/20">
-                        Solicitar Proposta Técnica
-                    </a>
-                    <a href="#servicos" class="px-8 py-4 border border-nsul-border text-white font-semibold text-sm uppercase tracking-wider rounded-full hover:border-nsul-accent transition-all text-center">
-                        Conhecer Portfólio
-                    </a>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 relative">
-                <div class="relative rounded-3xl overflow-hidden border border-nsul-accent/30 amber-glow bg-nsul-card p-3">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Norte Sul Construção Civil" class="w-full h-[460px] object-cover rounded-2xl filter contrast-110 hover:contrast-125 transition-all duration-700">
-                    <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-nsul-dark/95 backdrop-blur border border-nsul-border">
-                        <span class="text-nsul-accent text-[10px] font-bold tracking-widest uppercase block mb-1">Excelência Operacional</span>
-                        <p class="text-white text-sm font-medium">Equipe técnica qualificada com foco em segurança, tecnologia e alto desempenho.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="py-32 border-t border-nsul-border bg-[#05080b]">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div class="lg:col-span-5 space-y-6">
-                <span class="text-nsul-accent text-xs font-bold tracking-[0.3em] uppercase">Nossa Filosofia</span>
-                <h2 class="font-heading text-3xl sm:text-5xl text-white font-extrabold leading-tight">
-                    Compromisso inegociável com a qualidade e prazos.
-                </h2>
-                <div class="editorial-border pl-6 space-y-4 text-nsul-muted font-light text-sm leading-relaxed">
-                    <p>Cada projeto executado pela Norte Sul passa por um estudo técnico minucioso, unindo planejamento rigoroso e engenharia de ponta para garantir durabilidade e segurança absoluta.</p>
-                    <p>Nossa palavra é tão sólida quanto nossas estruturas. Entregamos o que prometemos com total transparência e respeito ao cliente e ao meio ambiente.</p>
-                </div>
-            </div>
-            
-            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="bg-nsul-card p-8 rounded-3xl border border-nsul-border hover:border-nsul-accent/50 transition-all group">
-                    <div class="w-12 h-12 rounded-2xl bg-nsul-accent/10 flex items-center justify-center text-nsul-accent mb-6 font-heading text-xl font-extrabold group-hover:scale-110 transition-transform">
-                        01
-                    </div>
-                    <h3 class="font-heading text-2xl text-white mb-3">Planejamento Técnico</h3>
-                    <p class="text-nsul-muted text-sm font-light leading-relaxed">Estudos detalhados de solo, viabilidade e cronogramas estritos para evitar atrasos e otimizar custos operacionais.</p>
-                </div>
-
-                <div class="bg-nsul-card p-8 rounded-3xl border border-nsul-border hover:border-nsul-accent/50 transition-all group">
-                    <div class="w-12 h-12 rounded-2xl bg-nsul-accent/10 flex items-center justify-center text-nsul-accent mb-6 font-heading text-xl font-extrabold group-hover:scale-110 transition-transform">
-                        02
-                    </div>
-                    <h3 class="font-heading text-2xl text-white mb-3">Execução de Alta Performance</h3>
-                    <p class="text-nsul-muted text-sm font-light leading-relaxed">Parque de máquinas moderno e equipes especializadas transformando planos em estruturas robustas e seguras.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="py-32 bg-nsul-dark border-t border-nsul-border">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
-                <div>
-                    <span class="text-nsul-accent text-xs font-bold tracking-[0.3em] uppercase block mb-3">Áreas de Atuação</span>
-                    <h2 class="font-heading text-4xl sm:text-5xl font-extrabold text-white">Nossas Especialidades</h2>
-                </div>
-                <p class="text-nsul-muted text-sm max-w-md mt-4 md:mt-0 font-light">
-                    Soluções completas em infraestrutura, terraplanagem, pavimentação e sistemas elétricos para o setor público e privado.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Serviço 1 -->
-                <div class="group bg-nsul-card p-8 rounded-3xl border border-nsul-border flex flex-col justify-between hover:border-nsul-accent transition-all">
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="text-nsul-accent font-heading text-xl font-bold uppercase tracking-wider">Infraestrutura</span>
-                            <i class="fa-solid fa-city text-2xl text-nsul-accent/60"></i>
-                        </div>
-                        <h3 class="font-heading text-2xl text-white mb-3">Obras Civis & Estruturais</h3>
-                        <p class="text-nsul-muted text-sm font-light leading-relaxed mb-6">
-                            Projetos e execução de obras de grande porte com rigor técnico, garantindo durabilidade e segurança em cada metro quadrado construído.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Obras%20Civis." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-nsul-accent uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                        Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Serviço 2 -->
-                <div class="group bg-nsul-card p-8 rounded-3xl border border-nsul-accent/50 flex flex-col justify-between hover:border-nsul-accent transition-all relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-nsul-accent text-nsul-dark text-[10px] font-extrabold px-4 py-1.5 rounded-bl-xl uppercase tracking-widest">Alta Demanda</div>
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="text-nsul-accent font-heading text-xl font-bold uppercase tracking-wider">Pavimentação</span>
-                            <i class="fa-solid fa-road text-2xl text-nsul-accent/60"></i>
-                        </div>
-                        <h3 class="font-heading text-2xl text-white mb-3">Terraplanagem & Asfalto</h3>
-                        <p class="text-nsul-muted text-sm font-light leading-relaxed mb-6">
-                            Movimentação precisa de solo e pavimentações de qualidade superior com controle rigoroso de materiais e acabamento impecável.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Pavimentação." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-nsul-accent uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                        Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Serviço 3 -->
-                <div class="group bg-nsul-card p-8 rounded-3xl border border-nsul-border flex flex-col justify-between hover:border-nsul-accent transition-all">
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="text-nsul-accent font-heading text-xl font-bold uppercase tracking-wider">Energia</span>
-                            <i class="fa-solid fa-bolt text-2xl text-nsul-accent/60"></i>
-                        </div>
-                        <h3 class="font-heading text-2xl text-white mb-3">Redes Elétricas & Solar</h3>
-                        <p class="text-nsul-muted text-sm font-light leading-relaxed mb-6">
-                            Implantação de redes de alta e baixa tensão, além de suporte, diagnóstico e manutenção em sistemas de energia fotovoltaica.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5513999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Redes%20Elétricas%20e%20Energia%20Solar." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-nsul-accent uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                        Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contato" class="bg-[#05080b] border-t border-nsul-border py-20">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="font-heading text-2xl text-white tracking-wide uppercase block mb-2 font-extrabold">NORTE SUL CONSTRUÇÃO CIVIL</span>
-                <p class="text-nsul-muted text-sm font-light">Engenharia, Infraestrutura e Soluções em Alta Tensão e Pavimentação • Atendimento especializado.</p>
-            </div>
-            <div class="flex md:justify-end gap-6">
-                <a href="https://instagram.com" target="_blank" class="px-6 py-3 rounded-full border border-nsul-border text-nsul-muted hover:text-nsul-accent hover:border-nsul-accent transition-all text-xs uppercase tracking-widest font-bold flex items-center gap-2">
-                    <i class="fa-brands fa-instagram"></i> <span>@nortesulconstrucaocivil</span>
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#121212] border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#sobre" class="mobile-link block text-gray-300 hover:text-[#D97706]">A Empresa</a>
+            <a href="#servicos" class="mobile-link block text-gray-300 hover:text-[#D97706]">Serviços</a>
+            <a href="#projetos" class="mobile-link block text-gray-300 hover:text-[#D97706]">Projetos</a>
+            <a href="#diferenciais" class="mobile-link block text-gray-300 hover:text-[#D97706]">Diferenciais</a>
+            <a href="#contato" class="mobile-link block text-gray-300 hover:text-[#D97706]">Contato</a>
+            <div class="pt-4 border-t border-white/10">
+                <a 
+                    href="https://wa.me/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center gap-2 bg-[#D97706] text-white w-full py-3 rounded-full text-sm font-semibold"
+                >
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    Falar no WhatsApp
                 </a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-nsul-border/40 text-center text-xs text-nsul-muted font-light">
-            &copy; 2026 Norte Sul Construção Civil. Desenvolvido sob o Padrão de Engenharia e Design Moderno.
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-[#121212] to-[#0A0A0A]">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D97706_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D97706]/10 border border-[#D97706]/30 text-[#D97706] text-xs font-semibold tracking-wide uppercase">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> Excelência e Rigor Técnico na Construção
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        Transformando projetos em <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D97706] to-[#F59E0B]">estruturas sólidas</span> e duradouras.
+                    </h1>
+                    
+                    <p class="text-lg text-gray-400 max-w-xl font-normal leading-relaxed">
+                        Especialistas em engenharia, execução de obras residenciais e comerciais com alto padrão de acabamento, cumprimento rigoroso de prazos e segurança absoluta.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a 
+                            href="https://wa.me/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="flex items-center justify-center gap-3 bg-[#D97706] hover:bg-[#B45309] text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-xl shadow-[#D97706]/25 group"
+                        >
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Solicitar Orçamento
+                            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        
+                        <a 
+                            href="#projetos" 
+                            class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-xl font-semibold transition-all"
+                        >
+                            Ver Nossas Obras
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-bold text-white">+100</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Obras Executadas</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-bold text-white">100%</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Compromisso com Prazos</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl md:text-3xl font-bold text-white">Alto</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Padrão de Acabamento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-[#D97706] to-amber-600 rounded-2xl blur-xl opacity-30"></div>
+                        <div class="relative bg-[#18181B] border border-white/10 p-4 rounded-2xl shadow-2xl">
+                            <div class="aspect-[4/5] bg-[#27272A] rounded-xl overflow-hidden relative flex items-center justify-center group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                                <div class="absolute bottom-6 left-6 right-6 z-20 space-y-2">
+                                    <span class="text-xs uppercase tracking-widest text-[#D97706] font-bold">Engenharia Civil</span>
+                                    <h3 class="text-xl font-bold text-white">Do alicerce aos acabamentos finos</h3>
+                                    <p class="text-xs text-gray-300">Estruturas planejadas para garantir segurança e valorização patrimonial.</p>
+                                </div>
+                                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d0fbb18f7238?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-700"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre" class="py-24 bg-[#121212] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-[#D97706] font-bold">Quem Somos</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                        Construindo com solidez, transparência e precisão técnica.
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        A <strong class="text-white">Norte Sul Construção Civil</strong> atua com foco em excelência estrutural e gestão completa de obras. Nossa missão é transformar o planejamento em realidade tangível, unindo engenharia de ponta, materiais de alta qualidade e uma equipe altamente qualificada.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 rounded bg-[#D97706]/10 text-[#D97706] mt-1">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Planejamento Estratégico</h4>
+                                <p class="text-sm text-gray-400">Cronogramas rigorosos e controle de custos transparente em todas as etapas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 rounded bg-[#D97706]/10 text-[#D97706] mt-1">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Execução Especializada</h4>
+                                <p class="text-sm text-gray-400">Profissionais capacitados e supervisão técnica contínua no canteiro de obras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="bg-[#1C1C1E] p-6 rounded-2xl border border-white/5">
+                            <i data-lucide="hard-hat" class="w-8 h-8 text-[#D97706] mb-3"></i>
+                            <h3 class="text-white font-bold mb-1">Segurança em Primeiro Lugar</h3>
+                            <p class="text-xs text-gray-400">Normas técnicas rigorosamente seguidas para proteção total.</p>
+                        </div>
+                        <div class="bg-[#1C1C1E] p-6 rounded-2xl border border-white/5">
+                            <i data-lucide="award" class="w-8 h-8 text-[#D97706] mb-3"></i>
+                            <h3 class="text-white font-bold mb-1">Qualidade Garantida</h3>
+                            <p class="text-xs text-gray-400">Acabamentos impecáveis e durabilidade estrutural comprovada.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-[#1C1C1E] p-6 rounded-2xl border border-white/5">
+                            <i data-lucide="ruler" class="w-8 h-8 text-[#D97706] mb-3"></i>
+                            <h3 class="text-white font-bold mb-1">Projetos Personalizados</h3>
+                            <p class="text-xs text-gray-400">Soluções arquitetônicas e estruturais sob medida para cada cliente.</p>
+                        </div>
+                        <div class="bg-[#1C1C1E] p-6 rounded-2xl border border-white/5">
+                            <i data-lucide="clock" class="w-8 h-8 text-[#D97706] mb-3"></i>
+                            <h3 class="text-white font-bold mb-1">Pontualidade na Entrega</h3>
+                            <p class="text-xs text-gray-400">Respeito absoluto ao prazo acordado no contrato.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicos" class="py-24 bg-[#0A0A0A]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest text-[#D97706] font-bold">Nossas Soluções</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Obras Civis com Padrão Superior</h2>
+                <p class="text-gray-400">Oferecemos soluções completas para o seu projeto, do projeto inicial à entrega das chaves.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#18181B] border border-white/10 rounded-2xl p-8 hover:border-[#D97706]/50 transition-all group">
+                    <div class="w-14 h-14 bg-[#D97706]/10 rounded-xl flex items-center justify-center text-[#D97706] mb-6 group-hover:bg-[#D97706] group-hover:text-white transition-all">
+                        <i data-lucide="building-2" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Construção Residencial</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Realizamos o sonho da casa própria ou de alto padrão com gestão completa de fundações, alvenaria, instalações e acabamentos refinados.
+                    </p>
+                    <a href="https://wa.me/" class="inline-flex items-center gap-2 text-sm font-semibold text-[#D97706] hover:text-amber-400">
+                        Saiba mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-[#18181B] border border-white/10 rounded-2xl p-8 hover:border-[#D97706]/50 transition-all group">
+                    <div class="w-14 h-14 bg-[#D97706]/10 rounded-xl flex items-center justify-center text-[#D97706] mb-6 group-hover:bg-[#D97706] group-hover:text-white transition-all">
+                        <i data-lucide="hard-hat" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Construção Comercial</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Espaços comerciais planejados para otimizar operações, atrair clientes e reforçar a identidade do seu negócio com total robustez.
+                    </p>
+                    <a href="https://wa.me/" class="inline-flex items-center gap-2 text-sm font-semibold text-[#D97706] hover:text-amber-400">
+                        Saiba mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="bg-[#18181B] border border-white/10 rounded-2xl p-8 hover:border-[#D97706]/50 transition-all group">
+                    <div class="w-14 h-14 bg-[#D97706]/10 rounded-xl flex items-center justify-center text-[#D97706] mb-6 group-hover:bg-[#D97706] group-hover:text-white transition-all">
+                        <i data-lucide="ruler" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Reformas e Ampliações</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Modernização de ambientes estruturais ou estéticos, com planejamento estratégico para minimizar transtornos e maximizar resultados.
+                    </p>
+                    <a href="https://wa.me/" class="inline-flex items-center gap-2 text-sm font-semibold text-[#D97706] hover:text-amber-400">
+                        Saiba mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS / GALLERY SECTION -->
+    <section id="projetos" class="py-24 bg-[#121212] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="space-y-4">
+                    <span class="text-xs uppercase tracking-widest text-[#D97706] font-bold">Portfólio</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Obras Realizadas com Excelência</h2>
+                    <p class="text-gray-400 max-w-xl">Confira alguns dos nossos projetos executados com rigor técnico e acabamento impecável.</p>
+                </div>
+                <a 
+                    href="https://wa.me/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-[#D97706] hover:bg-[#B45309] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all self-start"
+                >
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> Solicitar Orçamento de Projeto
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative bg-[#1C1C1E] rounded-2xl overflow-hidden border border-white/10">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10 opacity-80"></div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Residência Alto Padrão" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 z-20 bg-[#0A0A0A]/80 backdrop-blur-md text-[#D97706] text-xs font-semibold px-3 py-1 rounded-full border border-white/10">Residencial</span>
+                    </div>
+                    <div class="p-6 relative z-20 -mt-10">
+                        <div class="bg-[#18181B] p-4 rounded-xl border border-white/10 shadow-lg">
+                            <h3 class="text-white font-bold text-lg mb-1">Residência Alto Padrão - Alphaville</h3>
+                            <p class="text-xs text-gray-400">Execução completa de engenharia, estrutura e acabamento final.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-[#1C1C1E] rounded-2xl overflow-hidden border border-white/10">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10 opacity-80"></div>
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Complexo Comercial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 z-20 bg-[#0A0A0A]/80 backdrop-blur-md text-[#D97706] text-xs font-semibold px-3 py-1 rounded-full border border-white/10">Comercial</span>
+                    </div>
+                    <div class="p-6 relative z-20 -mt-10">
+                        <div class="bg-[#18181B] p-4 rounded-xl border border-white/10 shadow-lg">
+                            <h3 class="text-white font-bold text-lg mb-1">Complexo Comercial Norte Sul</h3>
+                            <p class="text-xs text-gray-400">Execução completa de engenharia, estrutura e acabamento final.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-[#1C1C1E] rounded-2xl overflow-hidden border border-white/10">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10 opacity-80"></div>
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Reforma Estrutural" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 z-20 bg-[#0A0A0A]/80 backdrop-blur-md text-[#D97706] text-xs font-semibold px-3 py-1 rounded-full border border-white/10">Reforma</span>
+                    </div>
+                    <div class="p-6 relative z-20 -mt-10">
+                        <div class="bg-[#18181B] p-4 rounded-xl border border-white/10 shadow-lg">
+                            <h3 class="text-white font-bold text-lg mb-1">Reforma Estrutural e Moderna</h3>
+                            <p class="text-xs text-gray-400">Execução completa de engenharia, estrutura e acabamento final.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section id="contato" class="py-24 bg-gradient-to-b from-[#121212] to-[#0A0A0A] relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center space-y-8 bg-[#18181B] border border-white/10 p-12 md:p-16 rounded-3xl shadow-2xl">
+            <div class="w-16 h-16 bg-[#D97706]/10 text-[#D97706] rounded-2xl flex items-center justify-center mx-auto">
+                <i data-lucide="building-2" class="w-8 h-8"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                Pronto para tirar seu projeto do papel com segurança?
+            </h2>
+            
+            <p class="text-gray-400 max-w-xl mx-auto text-base">
+                Entre em contato direto com a nossa equipe de engenharia e solicite um orçamento personalizado para a sua obra residencial ou comercial.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a 
+                    href="https://wa.me/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-3 bg-[#D97706] hover:bg-[#B45309] text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-xl shadow-[#D97706]/25 text-lg"
+                >
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    Conversar com Especialista no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0A0A0A] border-t border-white/10 py-12 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-[#D97706] flex items-center justify-center rounded-lg text-white font-bold">
+                    NS
+                </div>
+                <span class="text-white font-bold tracking-wider uppercase">Norte Sul Construção Civil</span>
+            </div>
+
+            <p class="text-xs text-gray-500">
+                © <span id="year"></span> Norte Sul Construção Civil. Todos os direitos reservados. Desenvolvido com padrão Speck Digital.
+            </p>
+
+            <div class="flex items-center gap-4">
+                <a href="https://www.instagram.com/nortesulconstrucaocivil" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#D97706] text-xs font-semibold">
+                    Instagram
+                </a>
+            </div>
         </div>
     </footer>
 
+    <!-- Script to initialize Lucide icons and Mobile menu toggle -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
-```
